@@ -3,14 +3,14 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            message: 'Hello vue!',
+            // message: 'Hello vue!',
             songs: [],
         }
     },
     methods: {
         fetchSongs() {
             axios.get('server.php').then((res) => {
-                console.log(res.data)
+                // console.log(res.data)
                 this.songs = res.data
                 // console.log(this.songs)
             })
