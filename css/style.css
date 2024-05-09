@@ -1,10 +1,44 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-ul, ol{
+img {
+    width: 100%;
+}
+
+ul,
+ol {
     list-style: none;
-    
+
+}
+
+.display-flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.bg-blue {
+    background-color: #1D2D3C;
+}
+.bg-dark-blue {
+    background-color: #06131F;
+}
+
+.song-card {
+    background-color: #112030;
+    border-radius: 5px;
+    padding: 20px 40px 20px 40px;
+    margin: 30px;
+    width: calc(((100% / 12)*4) - 60px);
+}
+
+.header-image img{
+    border-radius: 9999px !important;
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin: 20px 15px;
+
 }

@@ -15,32 +15,30 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <div id="app">
-        <span class="text-dark">
-            <strong>PHP Dischi JSON</strong>
-        </span>
-        <main>
+        <header>
+        <?php require_once "./header.php"; ?>
+        </header>
+        <main class="bg-blue">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <ul>
-                            <li v-for="song in songs">
-                                {{ song.title}}
-                            </li>
-                        </ul>
-                        <div class="card" style="width: 18rem;" v-for="song in songs">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ song.title}}</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+                <div class="display-flex-row col-12">
+                    <div class="song-card" v-for="song in songs">
+
+                        <img :src="song.poster" alt="...">
+                        <div class="text-center">
+                            <h4 class="text-light pt-2">{{ song.title}}</h4>
+                            <p class="text-light">{{ song.author}}</p>
+                            <p class="text-light">{{ song.year}}</p>
                         </div>
+
                     </div>
                 </div>
             </div>
 
 
         </main>
+        <footer>
+
+        </footer>
     </div>
 
 
